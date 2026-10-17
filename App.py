@@ -1,3 +1,4 @@
+import utils.session
 import streamlit as st
 import joblib
 import pandas as pd
@@ -10,7 +11,7 @@ model = joblib.load('intent_model.pkl')
 vectorizer = joblib.load('vectorizer.pkl')  # ✅ Load trained vectorizer
 
 # Load dataset
-df = pd.read_csv(r'D:\Machine Learning\Project\Career_dataset.csv')
+df = pd.read_csv('./Career_dataset.csv')
 df.drop_duplicates(inplace=True)
 
 # Preprocess dataset questions using same methods as during training
