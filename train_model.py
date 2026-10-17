@@ -7,7 +7,7 @@ from utils import preprocess, lemmatization
 import joblib
 
 #Load Data Set
-df = pd.read_csv(r'D:\Machine Learning\Project\Career_dataset.csv')
+df = pd.read_csv('./Career_dataset.csv')
 df.drop_duplicates(subset='question', inplace=True)
 
 #Apply preprocessing on question series
